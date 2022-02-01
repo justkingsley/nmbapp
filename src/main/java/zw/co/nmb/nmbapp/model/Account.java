@@ -19,12 +19,10 @@ import java.util.List;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-//@Table(uniqueConstraints = { @UniqueConstraint(name = "UniqueAccountNumber", columnNames = { "accountNumber" }) })
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-//    @Column(unique = true)
     private Long accountNumber;
     @CreatedDate
     @Column(updatable = false)

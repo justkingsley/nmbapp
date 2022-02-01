@@ -25,11 +25,6 @@ public class RestExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
     }
 
-//    @ExceptionHandler(DataIntegrityViolationException.class)
-//    public ResponseEntity<String> uniquenessViolation(DataIntegrityViolationException e) {
-//        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("unique constraint violation");
-//    }
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> generalException(Exception e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
